@@ -1,55 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+    android:id="@+id/activity_child"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.kczaja.zadanie3.MainActivity">
+    tools:context="com.example.kczaja.zadanie3.ChildActivity">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/answerFromAct2"
+            android:id="@+id/colorFromAct1"
             android:textSize="30sp"
-            android:textAlignment="center"
-            android:textStyle="normal|bold" />
+            android:textStyle="normal|bold"
+            android:textAlignment="center" />
 
         <Button
-            android:text="Pomarańczowy"
+            android:text="Potwierdź"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/orange"
-            android:onClick="onClick)" />
+            android:id="@+id/confirm" />
 
         <Button
-            android:text="Niebieski"
+            android:text="Anuluj"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/blue"
-            android:onClick="onClick" />
-
-        <Button
-            android:text="Czerwony"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/red"
-            android:onClick="onClick" />
-
-        <Button
-            android:text="Zielony"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/green"
-            android:onClick="onClick" />
-
+            android:id="@+id/discard" />
     </LinearLayout>
 </RelativeLayout>
