@@ -31,16 +31,17 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View view) {
 
         Button clickedButton = (Button) view;
-        Intent intent = new Intent(getApplication(), ChildActivity.class);
+        Intent intent = new Intent(getBaseContext(), ChildActivity.class);
         intent.putExtra("color", clickedButton.getText().toString());
         startActivityForResult(intent, RESULT_OK);
     }
 
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
         if (resultCode == Activity.RESULT_OK) {
-            switch(requestCode) {
+            switch (requestCode) {
                 case RESULT_OK:
                     String answer = data.getStringExtra("color");
                     textView.setText(answer);
@@ -52,4 +53,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+
 }

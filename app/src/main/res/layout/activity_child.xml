@@ -29,12 +29,14 @@
             android:text="Potwierdź"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/confirm" />
+            android:id="@+id/confirm"
+            android:onClick="onClick" />
 
         <Button
             android:text="Anuluj"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/discard" />
+            android:id="@+id/discard"
+            android:onClick="onClick" />
     </LinearLayout>
 </RelativeLayout>
