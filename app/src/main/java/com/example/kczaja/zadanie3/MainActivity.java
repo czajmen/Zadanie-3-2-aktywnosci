@@ -33,25 +33,23 @@ public class MainActivity extends AppCompatActivity {
         Button clickedButton = (Button) view;
         Intent intent = new Intent(getBaseContext(), ChildActivity.class);
         intent.putExtra("color", clickedButton.getText().toString());
-        startActivityForResult(intent, RESULT_OK);
+        startActivityForResult(intent, 2);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (resultCode == Activity.RESULT_OK) {
-            switch (requestCode) {
-                case RESULT_OK:
-                    String answer = data.getStringExtra("color");
+            switch (resultCode) {
+                case 2:
+                    String answer = data.getStringExtra(getString(R.string.color));
                     textView.setText(answer);
                     break;
 
-                case RESULT_CANCELED:
-                    textView.setText("Niet");
+                case 3:
+                    textView.setText(R.string.anuluj);
                     break;
             }
-        }
     }
 
 

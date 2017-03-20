@@ -36,7 +36,7 @@ public class ChildActivity extends AppCompatActivity {
         Button clickedButton = (Button) view;
         Intent intent = new Intent();
         intent.putExtra("color", clickedButton.getText().toString());
-        setResult(RESULT_OK, intent);
+        setResult(2, intent);
         finish();
     }
 
@@ -46,8 +46,7 @@ public class ChildActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         Intent intent = new Intent();
-        intent.putExtra("result", 0);
-        setResult(RESULT_OK, intent);
+        setResult(3, intent);
         super.onBackPressed();
     }
 
